@@ -1,4 +1,4 @@
-# Foobar
+# Description
 
 Maximization algorithm on items in a backpack; that is, you get the most benefit from a set of items limited by a maximum weight
 
@@ -7,6 +7,9 @@ To run this program, you must choose what type of data you want the program runs
 ```python
     # To enter data manually
     arr  = enteries()
+   
+    OR
+   
     # Default data
     arr = [
         {'price': 10, 'weight': 20},
