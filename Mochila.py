@@ -1,6 +1,6 @@
 def main():
-    # To enter data manually
-    # arr  = enteries()
+    print('Obtener el mayor coste dentro de una mochila con capacidad máxima de 100')
+    print('Datos por defecto:')
     # Default data
     arr = [
         {'price': 10, 'weight': 20},
@@ -9,6 +9,11 @@ def main():
         {'price': 40, 'weight': 40},
         {'price': 50, 'weight': 20}
     ]
+    for idx, art in enumerate(arr):
+        print('{}. Costo: {}; Peso: {}'.format(idx + 1, art['price'], art['weight']))
+    # To enter data manually
+    if input('¿Usar datos predeterminados? (y/n) ') != 'y' :
+        arr  = enteries()
     # Assign the divided values of the article
     xArr = getPartArr(makeEmptyArr(arr), arr)
 
