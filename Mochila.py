@@ -7,7 +7,7 @@ def main():
         {'price': 20, 'weight': 30},
         {'price': 30, 'weight': 66},
         {'price': 40, 'weight': 40},
-        {'price': 50, 'weight': 60}
+        {'price': 50, 'weight': 20}
     ]
     for idx, art in enumerate(arr):
         print('{}. Costo: ${}; Peso: {} kg'.format(idx + 1, art['price'], art['weight']))
@@ -29,7 +29,7 @@ def printArticles(xArr):
 # Returns the divided values by some criteria defined by voraSelection function
 def getPartArr(xArr, arr):
     add = 0
-    weight = 100
+    weight = int(input('Ingrese peso máximo de la mochila (kg): '))
     while add < weight: 
         i = voraSelection(xArr, arr)
         if add + arr[i]['weight'] <= weight:
