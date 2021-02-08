@@ -10,7 +10,7 @@ def main():
         {'price': 50, 'weight': 20}
     ]
     for idx, art in enumerate(arr):
-        print('{}. Costo: {}; Peso: {}'.format(idx + 1, art['price'], art['weight']))
+        print('{}. Costo: ${}; Peso: {} kg'.format(idx + 1, art['price'], art['weight']))
     # To enter data manually
     if input('¿Usar datos predeterminados? (y/n) ') != 'y' :
         arr  = enteries()
@@ -44,8 +44,8 @@ def enteries():
     valid = 'y'
     arr = []
     while True:
-        price  = int(input('Ingrese costo: '))
-        weight = int(input('Ingrese peso : '))
+        price  = int(input('Ingrese costo: $'))
+        weight = int(input('Ingrese peso (kg): '))
         arr.append({'weight':weight, 'price': price})
 
         valid = input('Costo agregado, ¿Desea agregar otro? (y/n) ')
