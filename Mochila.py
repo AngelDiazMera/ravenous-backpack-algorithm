@@ -23,7 +23,7 @@ def main():
 # Prints all the articles that can be inside the backpack
 def printArticles(xArr):
     for idx, value in enumerate(xArr):
-        if value != 0: print('{} veces el artículo {}'.format(value, idx))
+        if value != 0: print('{} veces el artículo {}'.format(value, idx+1))
     return
 # This is the Alorithm
 # Returns the divided values by some criteria defined by voraSelection function
