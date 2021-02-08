@@ -7,7 +7,7 @@ def main():
         {'price': 20, 'weight': 30},
         {'price': 30, 'weight': 66},
         {'price': 40, 'weight': 40},
-        {'price': 50, 'weight': 20}
+        {'price': 50, 'weight': 60}
     ]
     for idx, art in enumerate(arr):
         print('{}. Costo: ${}; Peso: {} kg'.format(idx + 1, art['price'], art['weight']))
