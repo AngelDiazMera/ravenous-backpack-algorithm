@@ -33,7 +33,7 @@ def getPartArr(xArr, arr):
     while add < weight: 
         # Call the voraSelection function to select an id
         i = voraSelection(xArr, arr) 
-        # If the sum of artivles is still supported by the maximum weight of the backpack   
+        # If the sum of articles is still supported by the maximum weight of the backpack   
         if add + arr[i]['weight'] <= weight:
             xArr[i] = 1
             add = add + arr[i]['weight']
@@ -47,7 +47,7 @@ def enteries():
     valid = 'y'
     # Empty list
     arr = []
-    # Cycle that stops until the user decides to stop entering data of the artivles to be evaluated in the algorithm
+    # Cycle that stops until the user decides to stop entering data of the articles to be evaluated in the algorithm
     while True:
         price  = int(input('Ingrese costo: $'))
         weight = int(input('Ingrese peso (kg): '))
