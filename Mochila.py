@@ -1,7 +1,7 @@
 def main():
     print('Obtener el mayor coste dentro de una mochila con capacidad máxima de 100')
     print('Datos por defecto:')
-    # Default data
+    # Default data, stored by a list
     arr = [
         {'price': 10, 'weight': 20},
         {'price': 20, 'weight': 30},
@@ -31,10 +31,13 @@ def getPartArr(xArr, arr):
     add = 0
     weight = int(input('Ingrese peso máximo de la mochila (kg): '))
     while add < weight: 
-        i = voraSelection(xArr, arr)
+        # Call the voraSelection function to select an id
+        i = voraSelection(xArr, arr) 
+        # If the sum of artivles is still supported by the maximum weight of the backpack   
         if add + arr[i]['weight'] <= weight:
             xArr[i] = 1
             add = add + arr[i]['weight']
+        # When articles need to be divided to be carried in the backpack
         else: 
             xArr[i] = (weight - add) / arr[i]['weight']
             add = weight
@@ -42,19 +45,23 @@ def getPartArr(xArr, arr):
 # Returns the values entered by the user
 def enteries():
     valid = 'y'
+    # Empty list
     arr = []
+    # Cycle that stops until the user decides to stop entering data of the artivles to be evaluated in the algorithm
     while True:
         price  = int(input('Ingrese costo: $'))
         weight = int(input('Ingrese peso (kg): '))
-        arr.append({'weight':weight, 'price': price})
+        arr.append({'weight': weight, 'price': price})
 
         valid = input('Costo agregado, ¿Desea agregar otro? (y/n) ')
 
         while valid != 'y' and valid != 'n' :
             valid = input('Entrada incorrecta, ¿Desea agregar otro? (y/n) ')
         if valid == 'n': break
+    # Returns the list with the new articles data
     return arr
 
+# Fill an array of 0 based on the length of another array.
 def makeEmptyArr(arr):
     newArr = []
     for item in arr: newArr.append(0)
