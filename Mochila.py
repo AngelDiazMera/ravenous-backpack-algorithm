@@ -1,5 +1,9 @@
+import os
+
 def main():
-    print('Obtener el mayor coste dentro de una mochila con capacidad máxima de 100')
+    os.system('cls');
+    print('Funcionamiento\n  Obtiene el mayor coste dentro de una mochila dada una capacidad máxima.\n')
+    print('Selección\n  La selección de los artículos está definida por la mejor relación del precio respecto al peso.\n')
     print('Datos por defecto:')
     # Default data, stored by a list
     arr = [
@@ -10,20 +14,20 @@ def main():
         {'price': 50, 'weight': 20}
     ]
     for idx, art in enumerate(arr):
-        print('{}. Costo: ${}; Peso: {} kg'.format(idx + 1, art['price'], art['weight']))
+        print('\t{}. Costo: ${}; Peso: {} kg'.format(idx + 1, art['price'], art['weight']))
     # To enter data manually
-    if input('¿Usar datos predeterminados? (y/n) ') != 'y' :
+    if input('\n¿Usar datos predeterminados? (y/n) ') != 'y' :
         arr  = enteries()
     # Assign the divided values of the article
     xArr = getPartArr(makeEmptyArr(arr), arr)
 
-    print('Los artículos que se puede llevar son: ')
+    print('\nLos artículos que se puede llevar son: ')
     printArticles(xArr)
     return
 # Prints all the articles that can be inside the backpack
 def printArticles(xArr):
     for idx, value in enumerate(xArr):
-        if value != 0: print('{} veces el artículo {}'.format(value, idx+1))
+        if value != 0: print('\t{} veces el artículo {}'.format(value, idx+1))
     return
 # This is the Alorithm
 # Returns the divided values by some criteria defined by voraSelection function
