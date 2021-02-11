@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 
 def main():
@@ -33,7 +34,7 @@ def printArticles(xArr):
 # Returns the divided values by some criteria defined by voraSelection function
 def getPartArr(xArr, arr):
     add = 0
-    weight = int(input('Ingrese peso máximo de la mochila (kg): '))
+    weight = int(input('\nIngrese peso máximo de la mochila (kg): '))
     while add < weight: 
         # Call the voraSelection function to select an id
         i = voraSelection(xArr, arr) 
@@ -52,12 +53,13 @@ def enteries():
     # Empty list
     arr = []
     # Cycle that stops until the user decides to stop entering data of the articles to be evaluated in the algorithm
+    print('\nIngrese los datos de los artículos...')
     while True:
-        price  = int(input('Ingrese costo: $'))
-        weight = int(input('Ingrese peso (kg): '))
+        price  = int(input('\tIngrese costo: $'))
+        weight = int(input('\tIngrese peso (kg): '))
         arr.append({'weight': weight, 'price': price})
 
-        valid = input('Costo agregado, ¿Desea agregar otro? (y/n) ')
+        valid = input('Costo agregado, ¿Desea agregar otro? (y/n)')
 
         while valid != 'y' and valid != 'n' :
             valid = input('Entrada incorrecta, ¿Desea agregar otro? (y/n) ')
