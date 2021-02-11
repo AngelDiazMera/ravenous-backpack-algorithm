@@ -31,14 +31,19 @@ def main():
     xArr = getPartArr(makeEmptyArr(arr), arr)
 
     print('\nLos artículos que se puede llevar son: ')
-    printArticles(xArr)
+    printArticles(xArr, arr)
     print("Programa finalizado.\nPresione una tecla para continuar...")
     msvcrt.getch()
     return
 # Prints all the articles that can be inside the backpack
-def printArticles(xArr):
+def printArticles(xArr, arr):
+    total = 0
     for idx, value in enumerate(xArr):
-        if value != 0: print('\t{} veces el artículo {}'.format(value, idx+1))
+        if value != 0: 
+            total += value * arr[idx]['price']
+            print('\t{} veces el artículo {}'.format(value, idx+1))
+
+    print('\nTotal ganado: ${}\n'.format(str(total)))
     return
 # This is the Alorithm
 # Returns the divided values by some criteria defined by voraSelection function
