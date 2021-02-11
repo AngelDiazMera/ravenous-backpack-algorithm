@@ -1,5 +1,13 @@
-#!/usr/bin/env python
+# Algorythm: Maximization algorithm on items in a backpack; that is, you
+# get the most benefit from a set of items limited by a maximum weight
+# Developed by: Jorge Ángel Díaz Mera
+#		Rodrigo Cruz Cruz
+#		Marco Antonio Rosas Bárcenas
+# Universidad Politécnica de Pachuca (c) 2021
+
+
 import os
+import msvcrt
 
 def main():
     os.system('cls');
@@ -24,6 +32,8 @@ def main():
 
     print('\nLos artículos que se puede llevar son: ')
     printArticles(xArr)
+    print("Programa finalizado.\nPresione una tecla para continuar...")
+    msvcrt.getch()
     return
 # Prints all the articles that can be inside the backpack
 def printArticles(xArr):
